@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persoane>
+    <persoana id="1">
+        <nume>Popescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>23</varsta>
+        <email>popescu.ion@gmail.com</email>
+        <job>inginer</job>
+        <telefon>0756561432</telefon>
+        <hobby>fotbal</hobby>
+        <adresa>
+            <strada>Str. Zorilor</strada>
+            <numar>2</numar>
+            <localitate>Brosteni</localitate>
+            <judet>Suceava</judet>
+            <tara>Romania</tara>
+        </adresa>
+    </persoana>
+    <persoana id="2">
+        <nume>Vasile</nume>
+        <prenume>Andrei</prenume>
+        <varsta>21</varsta>
+        <email>vasile.andrei@gmail.com</email>
+        <job>ospatar</job>
+        <telefon>0756788432</telefon>
+        <hobby>ciclism</hobby>
+        <adresa>
+            <strada>Str. Lalelelor</strada>
+            <numar>5</numar>
+            <localitate>Iasi</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+    </persoana>
+    <persoana id="3">
+        <nume>Craciun</nume>
+        <prenume>Maria</prenume>
+        <varsta>28</varsta>
+        <email>craciun.maria@gmail.com</email>
+        <job>manager</job>
+        <telefon>0732761432</telefon>
+        <hobby>citit</hobby>
+        <adresa>
+            <strada>Str. Zimbrilor</strada>
+            <numar>1</numar>
+            <localitate>Suceava</localitate>
+            <judet>Suceava</judet>
+            <tara>Romania</tara>
+        </adresa>
+    </persoana>
+    <persoana id="4">
+        <nume>Agapie</nume>
+        <prenume>Ana</prenume>
+        <varsta>31</varsta>
+        <email>agapie.ana@gmail.com</email>
+        <job>medic</job>
+        <telefon>0716541422</telefon>
+        <hobby>inot</hobby>
+        <adresa>
+            <strada>Str. Apusului</strada>
+            <numar>23</numar>
+            <localitate>Pascani</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+    </persoana>
+    <persoana id="5">
+        <nume>Balau</nume>
+        <prenume>Marian</prenume>
+        <varsta>20</varsta>
+        <email>balau.marian@gmail.com</email>
+        <job>asistent medical</job>
+        <telefon>0759565321</telefon>
+        <hobby>parasutism</hobby>
+        <adresa>
+            <strada>Str. Rasaritului</strada>
+            <numar>15</numar>
+            <localitate>Craiova</localitate>
+            <judet>Dolj</judet>
+            <tara>Romania</tara>
+        </adresa>
+    </persoana>
+</persoane>

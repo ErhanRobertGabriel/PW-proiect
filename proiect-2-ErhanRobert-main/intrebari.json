@@ -1,0 +1,102 @@
+[
+  {
+    "intrebare": "Ce este o papetărie?",
+    "variante": [
+      "magazin cu haine",
+      "magazin cu rechizite",
+      "magazin cu telefoane",
+      "magazin cu flori"
+    ],
+    "corect": 1
+  },
+  {
+    "intrebare": "Unde poți găsi o papetărie?",
+    "variante": [
+      "în munți",
+      "în apă",
+      "în pădure",
+      "în oraș"
+    ],
+    "corect": 3
+  },
+  {
+    "intrebare": "Ce poți cumpăra de la o papetărie?",
+    "variante": [
+      "legume",
+      "animale",
+      "rechizite",
+      "telefoane"
+    ],
+    "corect": 2
+  },
+  {
+    "intrebare": "Care dintre acestea este un obiect de papetărie?",
+    "variante": [
+      "pix",
+      "lingură",
+      "șurubelniță",
+      "ceas"
+    ],
+    "corect": 0
+  },
+  {
+    "intrebare": "Pentru ce este folosit un caiet?",
+    "variante": [
+      "pentru gătit",
+      "pentru scris",
+      "pentru tuns",
+      "pentru dormit"
+    ],
+    "corect": 1
+  },
+  {
+    "intrebare": "Care dintre următoarele NU se găsește într-o papetărie?",
+    "variante": [
+      "creion",
+      "stilou",
+      "pix",
+      "frigider"
+    ],
+    "corect": 3
+  },
+  {
+    "intrebare": "Ce se folosește pentru a șterge creionul?",
+    "variante": [
+      "riglă",
+      "radieră",
+      "stilou",
+      "cutter"
+    ],
+    "corect": 1
+  },
+  {
+    "intrebare": "Ce obiect de papetărie are cerneală?",
+    "variante": [
+      "creion",
+      "ascuțitoare",
+      "stilou",
+      "riglă"
+    ],
+    "corect": 2
+  },
+  {
+    "intrebare": "Ce folosești ca să tai hârtia?",
+    "variante": [
+      "foarfece",
+      "lipici",
+      "compas",
+      "creion"
+    ],
+    "corect": 0
+  },
+  {
+    "intrebare": "Ce obiect este util pentru a măsura linii?",
+    "variante": [
+      "gumă",
+      "riglă",
+      "stilou",
+      "marker"
+    ],
+    "corect": 1
+  }
+]

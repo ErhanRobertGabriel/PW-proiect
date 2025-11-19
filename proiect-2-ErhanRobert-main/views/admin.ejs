@@ -1,0 +1,22 @@
+<div class="admin-container">
+  <h2>Panou Administrator</h2>
+
+  <form class="admin-form" action="/admin/adauga-produs" method="POST">
+    <div class="form-group">
+      <label for="nume">Nume produs:</label>
+      <input type="text" name="nume" id="nume" required>
+    </div>
+
+    <div class="form-group">
+      <label for="pret">Preț:</label>
+      <input type="number" step="0.01" name="pret" id="pret" required>
+    </div>
+
+    <div class="form-group">
+      <label for="categorie">Categorie:</label>
+      <input type="text" name="categorie" id="categorie" required>
+    </div>
+
+    <button type="submit">Adaugă produs</button>
+  </form>
+</div>

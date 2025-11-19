@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/still.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercar</title>
+    <script>
+        function schimbaContinut(resursa, jsFisier, jsFunctie) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", resursa + ".html", true);  
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("continut").innerHTML = xhr.responseText;
+                    if (jsFisier) {
+                        var elementScript = document.createElement('script');
+                        elementScript.onload = function () {
+                            if (jsFunctie) {
+                                window[jsFunctie]();  
+                            }
+                        };
+                        elementScript.src = jsFisier;  
+                        document.head.appendChild(elementScript);
+                    } else {
+                        if (jsFunctie) {
+                            window[jsFunctie]();  
+                        }
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body onload="schimbaContinut('acasa')">
+    <nav>
+        <ul>
+            <li><a onclick="schimbaContinut('acasa')">Acasă</a></li>
+            <li><a onclick="schimbaContinut('inregistreaza')">Înregistrare</a></li>
+            <li><a onclick="schimbaContinut('despre')">Despre</a></li>
+            <li><a onclick="schimbaContinut('video')">Video</a></li>
+            <li><a onclick="schimbaContinut('desen')">Desen</a></li>
+            <li><a onclick="schimbaContinut('invat', 'js/script.js', 'initInvata')">Învăț</a></li>
+            <li><a onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">Persoane</a></li>
+            <li><a onclick="schimbaContinut('cumparaturi', 'js/cumparaturi.js')">Cumpărături</a></li>
+        </ul>
+    </nav>
+    <main id="continut"></main>
+
+    <footer>
+        <hr>
+        <p>@ 2025: Programare web</p>
+    </footer>
+</body>
+
+</html>

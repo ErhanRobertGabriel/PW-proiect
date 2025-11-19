@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Papetărie</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>Papetărie</h1>
+    <nav class="navbar">
+      <a href="/"><i class="fa-solid fa-house"></i> Acasă</a>
+      <a href="/chestionar"><i class="fa-solid fa-clipboard-question"></i> Chestionar</a>
+      <% if (utilizator && utilizator.rol==='ADMIN' ) { %>
+        <a href="/admin"><i class="fa-solid fa-user-shield"></i> Admin</a>
+      <% } %>
+    </nav>
+
+    <div class="user-info">
+      <% if (utilizator) { %>
+        Autentificat ca <%= utilizator.nume %> <%= utilizator.prenume %>
+        <form method="POST" action="/logout" style="display:inline;">
+          <button type="submit">Deconectare</button>
+        </form>
+      <% } else { %>
+        <a href="/autentificare">Autentificare</a>
+      <% } %>
+      <div class="cos-link">
+        <a href="/cos" class="btn-cos-sus"><i class="fa-solid fa-cart-shopping"></i> Coș</a>
+      </div>
+    </div>
+  </header>
+
+  <% if (mesaj) { %>
+    <div class="mesaj-alerta-eroare">
+      <%= mesaj %>
+    </div>
+  <% } %>
+
+  <% if (mesajBlocareIP) { %>
+    <div class="mesaj-alerta-eroare">
+      <%= mesajBlocareIP %>
+    </div>
+  <% } %>
+
+  <%- body %>
+</body>
+
+</html>

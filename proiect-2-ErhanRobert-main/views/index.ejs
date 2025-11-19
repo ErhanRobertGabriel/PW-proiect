@@ -1,0 +1,42 @@
+<main class="container">
+  <% if (utilizator) { %>
+    <h2>Bine ai venit, <%= utilizator.nume %>
+        <%= utilizator.prenume %>!</h2>
+    <% } else { %>
+      <h2>Bine ai venit!</h2>
+      <% } %>
+
+        <div style="margin-top: 30px; display: flex; justify-content: center; gap: 20px;">
+          <form action="/creare-bd" method="get">
+            <button type="submit" class="btn btn-primary">Creare BD</button>
+          </form>
+
+          <form action="/inserarebd" method="get">
+            <button type="submit" class="btn btn-secondary">Încărcare BD</button>
+          </form>
+        </div>
+
+        <% if (produse && produse.length> 0) { %>
+          <h3 style="margin-top: 40px; margin-left: 80px;">Produse disponibile:</h3>
+          <div class="produse-container">
+            <% produse.forEach(prod=> { %>
+              <div class="produs">
+                <div class="info">
+                  <strong>
+                    <%= prod.nume %>
+                  </strong> - <%= prod.pret %> lei (<%= prod.categorie %>)
+                </div>
+                <% if (utilizator) { %>
+                  <form action="/adaugare_cos" method="post">
+                    <input type="hidden" name="id" value="<%= prod.id %>">
+                    <button type="submit" class="btn-cos">Adaugă în coș</button>
+                  </form>
+                  <% } %>
+              </div>
+              <% }) %>
+          </div>
+          <% } else { %>
+            <p class="mesaj-alerta">Nu există produse în baza de date sau baza de date nu a fost creată încă.</p>
+            <% } %>
+
+</main>

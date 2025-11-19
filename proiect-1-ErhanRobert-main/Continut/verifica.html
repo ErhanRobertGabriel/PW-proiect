@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificare utilizator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        input {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #rezultat {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Verifică utilizator</h2>
+        <input type="text" id="utilizator" placeholder="Nume utilizator">
+        <input type="password" id="parola" placeholder="Parolă">
+        <button onclick="verifica()">Verifică</button>
+        <div id="rezultat"></div>
+    </div>
+
+    <script>
+        function verifica() {
+            const utilizator = document.getElementById("utilizator").value;
+            const parola = document.getElementById("parola").value;
+            const rezultat = document.getElementById("rezultat");
+
+            fetch("resurse/utilizatori.json")
+                .then(response => response.json())
+                .then(lista => {
+                    const valid = lista.find(u => u.utilizator === utilizator && u.parola === parola);
+                    if (valid) {
+                        rezultat.textContent = "Autentificare reușită!";
+                        rezultat.style.color = "green";
+                    } else {
+                        rezultat.textContent = "Nume sau parolă incorectă!";
+                        rezultat.style.color = "red";
+                    }
+                })
+                .catch(err => {
+                    rezultat.textContent = "Eroare la accesarea fișierului!";
+                    rezultat.style.color = "orange";
+                    console.error(err);
+                });
+        }
+    </script>
+</body>
+</html>

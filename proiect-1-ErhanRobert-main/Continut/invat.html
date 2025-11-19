@@ -1,0 +1,52 @@
+<aside>
+    <h3>Meniu:</h3><br>
+    <ul>
+        <li><a href="#sectiune1" class="custom-link">Informații</a></li>
+        <li><a href="#sectiune2" class="custom-link">Canvas</a></li>
+        <li><a href="#sectiune3" class="custom-link">Tabel</a></li><br>
+    </ul>
+</aside>
+<section id="sectiune1" style="display: none;">
+    <h2>Informații despre sistem:</h2><br>
+    <p id="info"></p>
+</section>
+<section id="sectiune2" style="display: none;">
+    <h2>Desen pe canvas:</h2><br>
+    <label for="culoareContur">Culoare contur:</label>
+    <input type="color" id="culoareContur" style="height: 60px;" value="#000000">
+
+    <label for="culoareUmplere">Culoare umplere:</label>
+    <input type="color" id="culoareUmplere" style="height: 60px;" value="#ff0000">
+
+    <canvas id="desenCanvas" width="500" height="300" style="border: 1px solid black;"></canvas><br>
+
+    <button id="clearCanvas">Șterge desenul</button>
+</section>
+<section id="sectiune3" style="display: none;">
+    <h2>Secțiunea 3: Modificare tabel</h2>
+    <p>Adaugă o linie sau o coloană nouă într-un tabel existent.</p><br>
+    <label for="pozitie">Poziție linie/coloană:</label>
+    <input type="number" id="pozitie" min="0" placeholder="Ex: 1">
+    <label for="culoare">Alege culoarea:</label>
+    <input type="color" id="culoare" style="height: 60px" value="#ff0000">
+
+    <button onclick="adaugaLinie()">Adaugă linie</button>
+    <button onclick="adaugaColoana()">Adaugă coloană</button>
+    <table id="tabelModificabil" border="1">
+        <tr>
+            <td>Celula 1</td>
+            <td>Celula 2</td>
+            <td>Celula 3</td>
+        </tr>
+        <tr>
+            <td>Celula 4</td>
+            <td>Celula 5</td>
+            <td>Celula 6</td>
+        </tr>
+        <tr>
+            <td>Celula 7</td>
+            <td>Celula 8</td>
+            <td>Celula 9</td>
+        </tr>
+    </table>
+</section>

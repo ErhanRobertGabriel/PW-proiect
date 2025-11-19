@@ -1,0 +1,32 @@
+[
+  {
+    "username": "admin",
+    "parola": "admin123",
+    "nume": "Admin",
+    "rol": "ADMIN" 
+  },
+  {
+    "username": "ion.popescu",
+    "parola": "parola123",
+    "nume": "Popescu",
+    "prenume": "Ion",
+    "email": "ion.popescu@example.com",
+    "rol": "USER"
+  },
+  {
+    "username": "maria.ionescu",
+    "parola": "parola456",
+    "nume": "Ionescu",
+    "prenume": "Maria",
+    "email": "maria.ionescu@example.com",
+    "rol": "USER"
+  },
+  {
+    "username": "vasile.george",
+    "parola": "parola789",
+    "nume": "George",
+    "prenume": "Vasile",
+    "email": "vasile.george@example.com",
+    "rol": "USER"
+  }
+]

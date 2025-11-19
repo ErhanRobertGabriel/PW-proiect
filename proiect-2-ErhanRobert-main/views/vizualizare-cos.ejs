@@ -1,0 +1,33 @@
+<main class="container">
+  <h2>Coșul tău de cumpărături</h2>
+
+  <% if (cos && cos.length> 0) { %>
+    <div class="produse-container">
+      <% cos.forEach(p=> { %>
+        <div class="produs">
+          <h3>
+            <%= p.nume %>
+          </h3>
+          <p><strong>Preț:</strong>
+            <%= p.pret %> RON
+          </p>
+          <p><strong>Categorie:</strong>
+            <%= p.categorie %>
+          </p>
+          <form action="/sterge-din-cos" method="POST">
+            <input type="hidden" name="nume" value="<%= p.nume %>">
+            <button class="btn btn-danger" type="submit">Șterge</button>
+          </form>
+        </div>
+        <% }) %>
+    </div>
+    <% } else { %>
+      <div class="mesaj-alerta">
+        Coșul este gol.
+      </div>
+      <% } %>
+
+        <div style="text-align: center; margin-top: 30px;">
+          <a href="/" class="btn btn-secondary">Înapoi la magazin</a>
+        </div>
+</main>

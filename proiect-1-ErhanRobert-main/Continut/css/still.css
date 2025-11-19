@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+/* fundal gradient pentru site */
+body {
+    background: linear-gradient(to right, #2805c1, #040271);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* stilizare meniu de navigare */
+nav {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease,color 0.3s ease;
+    border-radius: 5px;
+    display:inline-block;
+}
+
+nav a:hover {
+    background: #2805c1;
+    color: black;
+}
+
+@media print {
+    body {
+        font-size: 12px;
+    }
+
+    header, footer {
+        display: none;
+    }
+
+    nav ul {
+        display: block; 
+        text-align: left;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        background-color: #555;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* adaugare pseudo-element pentru titluri */
+h1::before {
+    content: "🔥 ";
+    color: red;
+}
+
+h1::after {
+    content: "🔥 ";
+    color: red;
+}
+
+/* stilizare tabel (despre.html) */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table th {
+    background: #2805c1;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* stilizare formular (inregistrare.html) */
+form {
+    background: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: auto;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #2805c1;
+    transform: scale(1.02);
+}
+
+button {
+    background: #2805c1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #2805c1;
+}
+
+/* efecte CSS3 */
+.logo {
+    width: 200px;
+    height: 200px;
+    background-color: #2805c1;
+    margin:auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    animation: rotatie 6s infinite linear;
+}
+
+@keyframes rotatie {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* stilizarea footer-ului */
+footer {
+    margin-top: auto;
+    background: linear-gradient(to right, #2805c1, #040271);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* stilizare pentru iframe */
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* asigura ca iframe-ul se redimensioneaza corect pe ecrane mai mici */
+    height: 400px;
+    border:none;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* centram lista ordonata */
+ol {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* numerotarea personalizata */
+ol[type="I"] li {
+    counter-increment: item; /* incrementeaza contorul pentru fiecare element */
+    position: relative;
+    padding-left: 25px;
+}
+
+ol[type="I"] li::before {
+    content: counter(item, upper-roman) ". "; /* adauga numerotarea romana înainte de fiecare element */
+    position: absolute;
+    left: 0; /* plaseaza numerotarea la stanga textului */
+    top: 0;
+}
+
+.video-border {
+    border: 5px solid black; 
+    border-radius: 15px; 
+    padding: 5px; 
+    display: block; 
+    margin: 20px auto;
+}
+
+.custom-link {
+    color: lightgray;
+    text-decoration: underline; 
+}
+
+.custom-link:hover {
+    color: red;
+}
+
+.image-border{
+    border:5px solid black;
+    border-radius: 5px;
+}
+
+/* stilizare tabel persoane */
+.persoane-tabel {
+    width: 80%; 
+    margin: 20px auto;
+    border-collapse: collapse; 
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.persoane-tabel th, .persoane-tabel td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.persoane-tabel th {
+    background: #2805c1;
+    color: white;
+}
+
+.persoane-tabel tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.persoane-tabel td {
+    font-size: 14px;
+    color: black;
+}
+
+.persoane-tabel th, .persoane-tabel td {
+    text-align: center;
+}
